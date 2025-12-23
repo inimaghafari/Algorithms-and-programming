@@ -1,0 +1,44 @@
+car_list = []
+birthday_list = []
+
+while True:
+
+    print("***menu***")
+    print("1) add car name")
+    print("2) birth of car")
+    print("3) remove car")
+    print("4) show car list")
+    print("5) show birth of car")
+    print("0) exit")
+    choice = int(input("Enter number "))
+    print("****************************************************")
+
+    if choice == 1:
+        car = input("write car name ")
+        car_list.append(car)
+        print("****************************************************")
+    elif choice == 2:
+        birth = int(input("write birth of car "))
+        birthday_list.append(birth)
+        print("****************************************************")
+    elif choice == 3:
+        remove_car = input("witch car? ")
+        if remove_car in car_list:
+            car_list.remove(remove_car)
+            print("sucsscfully removed")
+        else :
+            print("We don't have this car!  ")
+        print("****************************************************")
+
+    elif choice == 4:
+        print(car_list)
+        print("****************************************************")
+    elif choice == 5:
+        print(birthday_list)
+        print("****************************************************")
+    elif choice == 0:
+        print("Ok Goodbye")
+        break
+    else:
+        print("invalid choice")
+        print("****************************************************")
